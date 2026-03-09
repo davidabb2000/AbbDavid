@@ -21,6 +21,7 @@
 :root{
     --backgroundcolor: #FFF5EE;
     --firstcolor: rgb(250, 82, 60);
+    --firstgrid: #A382FF;
 }
 
 ::selection {
@@ -295,54 +296,115 @@ header .availability {
     box-shadow: 0 0 0;
 }
 
-.sect2{
+
+
+
+
+.sect2 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 59px;
+    margin-left: 15px;
+}
+
+.div1{
+    margin-left: 9px;
+    width: 420px;
+    height: 420px;
+    border-radius: 110px;
+    background-color: var(--firstgrid);
+    text-decoration: none;
+    transition: border-radius 1s ease;
+}
+
+.div1:hover{
+    border-radius: 420px;
+}
+
+.div1 img:nth-child(1){
+    width: 420px;
+    height: 420px;
+    border-radius: 110px;
+    position: absolute;
+    transition: all 1s ease;
+}
+
+.div1 img:nth-child(2){
+    opacity: 0;
+    width: 420px;
+    height: 420px;
+    border-radius: 420px;
+    position: absolute;
+    transition: all 0.8s ease;
+}
+
+.div1:hover img:nth-child(2){
+    opacity: 1;
+}
+
+.div1:hover img:nth-child(1){
+    border-radius: 0px 0px 200px 0px;
+    opacity: 1;
+    background-color: var(--backgroundcolor);
+}
+
+.div1 svg{
+    position: relative;
+    top: 230px;
+    left: -130px;
     width: 100%;
-    height: 860px;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    margin: 30px;
+    letter-spacing: 5px;
+    transition: transform 0.5s ease ;
 }
 
-.sect2-img1{
-    width: 410px;
-    border-radius: 86px;
+.div1 button{
+    position: relative;
+    border: 1px var(--firstgrid) solid;
+    outline: 3px solid white;
+    color: var(--firstgrid);
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 18px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+    left: 100px;
+    top: 270px;
+    transform: scale(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+    margin-left: 7px;
 }
 
-.sect2-img2 {
-    width: 410px;
-    border-radius: 86px;
-    border-radius: 0 0 0 90px;
+.div1 button:nth-child(even){
+    transform: rotate(9deg);
+    transform: scale(0);
 }
 
-.grid1{
-    display: grid;
-    height: 410px;
-    width: 410px;
-    background-color: #A382FF;
-    border-radius: 90px;
+.div1:hover button{
+    transform: scale(1);
 }
 
-.grid1-1{
-    display: grid;
-    background-color: #87935B;
-    border-radius: 90px;
-    height: 410px;
-    width: 410px;
+.div1:hover svg{
+    transform: translateY(-50px)
 }
 
-.grid2{
-    display: grid;
-    border: 2px black solid;
-    height: 410px;
-    width: 410px;
+
+.div4 {
+    grid-column-start: 2;
+    grid-row-start: 2;
 }
 
-.grid2-2{
-    display: grid;
-    border: 2px black solid;
-    height: 410px;
-    width: 410px;
+.div5 {
+    grid-column-start: 3;
+    grid-row-start: 2;
 }
+        
+
+
+
+
 
 .sect2 p{
     margin-top: 30%;
@@ -356,23 +418,21 @@ header .availability {
 
 .sect-btn{
     border: 2px solid red;
-    height: 30px;
-    width: 100px;
+    height: 25px;
+    width: 80px;
     text-decoration: none;
     font-family: "Bueno Regular";
     color: var(--firstcolor);
     border: 1px var(--firstcolor) solid;
     box-shadow: -4px 4px 0 var(--firstcolor);
     border-radius: 20px;
-    font-size: 20px;
-    position: relative;
-    left: 900px;
-    bottom: 120px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 900;
     transition: all 0.5s ease;
+    margin-top: 20px;
 }
 
 .sect-btn:hover {
