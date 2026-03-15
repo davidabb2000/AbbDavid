@@ -22,6 +22,9 @@
     --backgroundcolor: #FFF5EE;
     --firstcolor: rgb(250, 82, 60);
     --firstgrid: #A382FF;
+    --secondgrid: #87935B;
+    --thirdgrid: #7E6F5D;
+    --fourthgrid: #D80A0A;
 }
 
 ::selection {
@@ -36,6 +39,10 @@
 html, body {
     overflow-x: clip;
     background-color: var(--backgroundcolor);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .first-text {
@@ -316,11 +323,11 @@ header .availability {
     border-radius: 110px;
     background-color: var(--firstgrid);
     text-decoration: none;
-    transition: border-radius 1s ease;
+    transition: border-radius 0.5s ease 0.4s;
 }
 
 .div1:hover{
-    border-radius: 420px;
+    border-radius: 210px;
 }
 
 .div1 img:nth-child(1){
@@ -328,16 +335,16 @@ header .availability {
     height: 420px;
     border-radius: 110px;
     position: absolute;
-    transition: all 1s ease;
+    transition: all 0.5s ease 0.4s;
 }
 
 .div1 img:nth-child(2){
     opacity: 0;
     width: 420px;
     height: 420px;
-    border-radius: 420px;
+    border-radius: 210px;
     position: absolute;
-    transition: all 0.8s ease;
+    transition: all 0.5s ease 0.4s;
 }
 
 .div1:hover img:nth-child(2){
@@ -373,32 +380,255 @@ header .availability {
     top: 270px;
     transform: scale(0);
     transform-origin: bottom center;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     margin-left: 7px;
-}
-
-.div1 button:nth-child(even){
-    transform: rotate(9deg);
-    transform: scale(0);
 }
 
 .div1:hover button{
     transform: scale(1);
+    position: relative;
+}
+
+.div1:hover button:nth-child(odd){
+    transform: rotate(-5deg) scale(1);
 }
 
 .div1:hover svg{
     transform: translateY(-50px)
 }
 
-
-.div4 {
-    grid-column-start: 2;
-    grid-row-start: 2;
+.div2{
+    margin-left: 9px;
+    width: 420px;
+    height: 420px;
+    border-radius: 110px;
+    background-color: var(--secondgrid);
+    text-decoration: none;
+    transition: border-radius 0.3s ease 0.4s, background-color 0.3s ease 0.4s;
 }
 
-.div5 {
+.div2:hover{
+    border-radius: 210px;
+    background-color: #82A5DB;
+}
+
+.div2 img{
+    width: 420px;
+    height: 420px;
+    border-radius: 0px 0px 0px 100px;
+    position: absolute;
+    transition: all 0.3s ease 0.4s;
+}
+
+.div2:hover img{
+    border-radius: 0px 0px 0px 210px;
+}
+
+.div2 svg{
+    position: relative;
+    top: 200px;
+    left: -130px;
+    width: 100%;
+    letter-spacing: 5px;
+    transition: transform 0.5s ease ;
+    pointer-events: none;
+}
+
+.div2 button{
+    position: relative;
+    border: 1px var(--secondgrid) solid;
+    outline: 3px solid white;
+    color: var(--secondgrid);
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 18px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+    left: 100px;
+    top: 230px;
+    transform: scale(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+    margin-left: 7px;
+}
+
+
+
+.div2:hover button{
+    transform: scale(1);
+    top: 230px;
+    position: relative;
+}
+
+.div2:hover button:nth-child(even){
+    transform: rotate(10deg) scale(1);
+}
+
+.div2:hover svg{
+    transform: translateY(-60px)
+}
+
+.div3 p a{
+    color: black;
+}
+
+
+
+.div4{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-left: 9px;
+    width: 420px;
+    height: 420px;
+    border-radius: 110px;
+    background-color: var(--thirdgrid);
+    text-decoration: none;
+    transition: border-radius 0.3s ease 0.4s, background-color 0.3s ease 0.4s;
+}
+
+.div4:hover{
+    border-radius: 210px;
+    background-color: #979797;
+}
+
+.div4 img{
+    width: 420px;
+    height: 420px;
+    border-radius: 0px 0px 0px 100px;
+    position: absolute;
+    transition: all 0.3s ease 0.4s;
+}
+
+.div4:hover img{
+    border-radius: 0px 0px 0px 210px;
+}
+
+.div4 svg{
+    position: relative;
+    top: 200px;
+    left: -130px;
+    width: 100%;
+    letter-spacing: 5px;
+    transition: transform 0.5s ease ;
+    pointer-events: none;
+}
+
+.div4 button{
+    position: relative;
+    border: 1px var(--thirdgrid) solid;
+    outline: 3px solid white;
+    color: var(--thirdgrid);
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 18px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+    left: 100px;
+    top: 230px;
+    transform: scale(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+    margin-left: 7px;
+}
+
+
+
+.div4:hover button{
+    transform: scale(1);
+    top: 230px;
+    position: relative;
+}
+
+.div4:hover button:nth-child(even){
+    transform: rotate(10deg) scale(1);
+}
+
+.div4:hover svg{
+    transform: translateY(-60px)
+}
+
+
+.div5{
     grid-column-start: 3;
     grid-row-start: 2;
+    margin-left: 9px;
+    width: 420px;
+    height: 420px;
+    border-radius: 110px;
+    background-color: var(--fourthgrid);
+    text-decoration: none;
+    transition: border-radius 0.5s ease 0.4s;
+}
+
+.div5:hover{
+    border-radius: 210px;
+}
+
+.div5 img:nth-child(1){
+    width: 420px;
+    height: 420px;
+    border-radius: 110px;
+    position: absolute;
+    transition: all 0.5s ease 0.4s;
+}
+
+.div5 img:nth-child(2){
+    opacity: 0;
+    width: 420px;
+    height: 420px;
+    border-radius: 210px;
+    position: absolute;
+    transition: all 0.5s ease 0.4s;
+}
+
+.div5:hover img:nth-child(2){
+    opacity: 1;
+}
+
+.div5:hover img:nth-child(1){
+    border-radius: 210px 0px 0px 210px;
+    opacity: 1;
+    background-color: var(--backgroundcolor);
+}
+
+.div5 svg{
+    position: relative;
+    top: 230px;
+    left: -130px;
+    width: 100%;
+    letter-spacing: 5px;
+    transition: transform 0.5s ease ;
+}
+
+.div5 button{
+    position: relative;
+    border: 1px var(--fourthgrid) solid;
+    outline: 3px solid white;
+    color: var(--fourthgrid);
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 18px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+    left: 70px;
+    top: 270px;
+    transform: scale(0);
+    transform-origin: bottom center;
+    transition: transform 0.5s ease;
+    margin-left: 7px;
+}
+
+.div5:hover button{
+    transform: scale(1);
+    position: relative;
+}
+
+.div5:hover button:nth-child(odd){
+    transform: rotate(-5deg) scale(1);
+}
+
+.div5:hover svg{
+    transform: translateY(-50px)
 }
         
 
