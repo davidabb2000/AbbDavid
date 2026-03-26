@@ -765,7 +765,47 @@ header .availability {
     filter: hue-rotate(340deg);
 }
 
-.sect4 article{
-    background-color: red;
-    border: 1px black solid;
+.sect4{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 130px;
+}
+
+.sect4 article:nth-child(1){
+    background-color: var(--firstcolor);
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 410px;
+    height: 550px;
+    transform: rotate(5deg);
+    overflow: hidden;
+}
+
+.sect4 article:nth-child(2){
+    background-color: var(--firstcolor);
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 410px;
+    height: 550px;
+    transform: rotate(-5deg);
+    overflow: hidden;
+}
+
+.sect4 article:nth-child(3){
+    background-color: var(--firstcolor);
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 410px;
+    height: 550px;
+    transform: rotate(5deg);
+    overflow: hidden;
+}
+
+.sect4 article img{
+    position: relative;
+    top: 130px;
+    left: 143px;
+    transform: rotate(-15deg);
+    height: 350px;
 }
