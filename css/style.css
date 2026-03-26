@@ -20,7 +20,7 @@
 
 :root{
     --backgroundcolor: #FFF5EE;
-    --firstcolor: rgb(250, 82, 60);
+    --firstcolor: #D9533F;
     --firstgrid: #A382FF;
     --secondgrid: #87935B;
     --thirdgrid: #7E6F5D;
@@ -309,8 +309,7 @@ header .availability {
 
 .sect2 {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: auto;
     gap: 8px;
     margin-top: 59px;
     margin-left: 15px;
@@ -323,7 +322,7 @@ header .availability {
     border-radius: 110px;
     background-color: var(--firstgrid);
     text-decoration: none;
-    transition: border-radius 0.5s ease 0.4s;
+    transition: border-radius 0.5s ease 0.3s;
 }
 
 .div1:hover{
@@ -335,7 +334,7 @@ header .availability {
     height: 420px;
     border-radius: 110px;
     position: absolute;
-    transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.3s;
 }
 
 .div1 img:nth-child(2){
@@ -344,7 +343,7 @@ header .availability {
     height: 420px;
     border-radius: 210px;
     position: absolute;
-    transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.3s;
 }
 
 .div1:hover img:nth-child(2){
@@ -404,7 +403,7 @@ header .availability {
     border-radius: 110px;
     background-color: var(--secondgrid);
     text-decoration: none;
-    transition: border-radius 0.3s ease 0.4s, background-color 0.3s ease 0.4s;
+    transition: border-radius 0.3s ease 0.3s, background-color 0.3s ease 0.3s;
 }
 
 .div2:hover{
@@ -417,7 +416,7 @@ header .availability {
     height: 420px;
     border-radius: 0px 0px 0px 100px;
     position: absolute;
-    transition: all 0.3s ease 0.4s;
+    transition: all 0.3s ease 0.3s;
 }
 
 .div2:hover img{
@@ -483,7 +482,7 @@ header .availability {
     border-radius: 110px;
     background-color: var(--thirdgrid);
     text-decoration: none;
-    transition: border-radius 0.3s ease 0.4s, background-color 0.3s ease 0.4s;
+    transition: border-radius 0.3s ease 0.3s, background-color 0.3s ease 0.3s;
 }
 
 .div4:hover{
@@ -496,7 +495,7 @@ header .availability {
     height: 420px;
     border-radius: 0px 0px 0px 100px;
     position: absolute;
-    transition: all 0.3s ease 0.4s;
+    transition: all 0.3s ease 0.3s;
 }
 
 .div4:hover img{
@@ -557,7 +556,7 @@ header .availability {
     border-radius: 110px;
     background-color: var(--fourthgrid);
     text-decoration: none;
-    transition: border-radius 0.5s ease 0.4s;
+    transition: border-radius 0.5s ease 0.3s;
 }
 
 .div5:hover{
@@ -569,7 +568,7 @@ header .availability {
     height: 420px;
     border-radius: 110px;
     position: absolute;
-    transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.3s;
 }
 
 .div5 img:nth-child(2){
@@ -578,7 +577,7 @@ header .availability {
     height: 420px;
     border-radius: 210px;
     position: absolute;
-    transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.3s;
 }
 
 .div5:hover img:nth-child(2){
@@ -668,4 +667,105 @@ header .availability {
 .sect-btn:hover {
     transform: translateX(-3px) translateY(3px);
     box-shadow: 0 0 0;
+}
+
+
+
+.sect3{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.LB{
+    margin-left: 20px;
+    margin-top: 80px;
+    font-family: "Instrument Serif";
+    font-weight: 500;
+    font-size: 37px;
+}
+
+.sect3 article{
+    border: 2px red solid;
+    border-radius: 7px;
+    height: 300px;
+    background-color: #fdeded;
+    transition: background-color 1s ease;
+    cursor: pointer;
+}
+
+.sect3 article:hover{
+    background-color: #ffcece;
+}
+
+.sect3 article time{
+    color: red;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+}
+
+.tags{
+    list-style: none;
+    display: flex;
+    text-align: center;
+}
+
+.tags li a{
+    display: flex;
+    position: relative;
+    border: 1px white solid;
+    outline: 3px solid red;
+    color: white;
+    background-color: red;
+    padding: 5px 7px;
+    font-size: 15px;
+    border-radius: 18px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    left: -20px;
+}
+
+.sect3 article h3 a{
+    margin-left: 20px;
+    margin-top: 25px;
+    text-decoration: none;
+    font-family: "Bueno Regular";
+    display: flex;
+    color: red;
+    font-size: 45px;
+    font-weight: 900;
+    width: 300px;
+}
+
+.webmentions{
+    display: flex;
+    position: relative;
+    border: 1px white solid;
+    outline: 3px solid red;
+    color: white;
+    background-color: red;
+    padding: 5px 7px;
+    font-size: 15px;
+    border-radius: 18px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+    text-decoration: none;
+    width: 80px;
+    left: 300px;
+}
+
+.sect3 article:nth-child(2){
+    filter: hue-rotate(340deg);
+}
+
+.sect4 article{
+    background-color: red;
+    border: 1px black solid;
 }
