@@ -691,7 +691,7 @@ header .availability {
     border-radius: 7px;
     height: 300px;
     background-color: #fdeded;
-    transition: background-color 1s ease;
+    transition: background-color 0.7s ease;
     cursor: pointer;
 }
 
@@ -707,6 +707,28 @@ header .availability {
     font-family: "Bueno Regular";
     font-weight: 900;
 }
+
+/* El card interior, clip ajustado al padding */
+.sect3 article {
+  position: relative;
+  background: #fdeded;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+
+/* Triángulo del doblez */
+.sect3 article::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 18px 18px 0;
+  border-color: red red red red;
+  border-radius: 0 0 0 5px;
+}
+
 
 .tags{
     list-style: none;
@@ -765,6 +787,18 @@ header .availability {
     filter: hue-rotate(340deg);
 }
 
+.sect3 article:nth-child(3){
+    filter: grayscale(100%) opacity(0.8);
+}
+
+.sect3 article:nth-child(4){
+    filter: hue-rotate(240deg);
+}
+
+.sect3 article:nth-child(5){
+    filter: hue-rotate(60deg) opacity(0.7);
+}
+
 .sect4{
     display: flex;
     justify-content: center;
@@ -772,40 +806,76 @@ header .availability {
     margin-top: 130px;
 }
 
-.sect4 article:nth-child(1){
+.sect4 article{
+    cursor: pointer;
     background-color: var(--firstcolor);
     border: 2px black solid;
-    border-radius: 15px;
+    border-radius: 20px;
     width: 410px;
-    height: 550px;
-    transform: rotate(5deg);
+    height: 560px;
     overflow: hidden;
+}
+
+.sect4 article:nth-child(1){
+    transform: rotate(3deg);
 }
 
 .sect4 article:nth-child(2){
-    background-color: var(--firstcolor);
-    border: 2px black solid;
-    border-radius: 15px;
-    width: 410px;
-    height: 550px;
     transform: rotate(-5deg);
-    overflow: hidden;
 }
 
 .sect4 article:nth-child(3){
-    background-color: var(--firstcolor);
-    border: 2px black solid;
-    border-radius: 15px;
-    width: 410px;
-    height: 550px;
-    transform: rotate(5deg);
-    overflow: hidden;
+    transform: rotate(2deg);
+}
+
+.sect4 article svg {
+    position: relative;
+    bottom: 70px;
+    right: 180px;
 }
 
 .sect4 article img{
     position: relative;
-    top: 130px;
-    left: 143px;
+    top: 120px;
+    left: 155px;
     transform: rotate(-15deg);
-    height: 350px;
+    height: 330px;
+    transition: transform 0.3s ease;
+}
+
+.sect4 article img:nth-child(3){
+    height: 30px;
+}
+
+.sect4 article:hover img{
+    transform: translateX(-15px) translateY(-15px) rotate(-15deg);
+}
+
+.service-tags {
+    list-style: none;
+    display: flex;
+    width: max-content; /* cambia el 200% */
+    animation: service-tags-scroll 17s infinite linear;
+}
+
+@keyframes service-tags-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+.service-tags li a{
+    display: flex;
+    position: relative;
+    border: 1px red solid;
+    outline: 3px solid white;
+    color: red;
+    background-color: white;
+    padding: 5px 7px;
+    font-size: 15px;
+    border-radius: 18px;
+    font-family: "Bueno Regular";
+    font-weight: 900;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    top: 50px;
 }
