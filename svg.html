@@ -33,12 +33,37 @@
     </svg>
 
 
+
+    
+
+
     <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="55" fill="#E2FC91" />
-        
-        <text x="76" y="80" font-size="20" fill="#333" font-family="Bueno Regular" font-weight="900" >ACCESIBILITY</text>
-        <text x="63" y="100" font-size="20" fill="#333" font-family="Bueno Regular" font-weight="900" >ACCESIBILITY</text>
-        <image href="assets/img/planet.svg" y="103" width="40" height="40" x="80" class="sticker1"/>
-    </svg>
+  <defs>
+    <!-- El path empieza desde arriba (12 en punto) -->
+    <path id="ctp" d="M 100,36 A 64,64 0 1,1 99.999,36" fill="none"/>
+  </defs>
+
+  <circle cx="100" cy="100" r="68" fill="#d8f536"/>
+
+  <!-- Texto arriba, centrado en 0% -->
+  <text font-size="9" fill="#222" font-family="monospace" font-weight="900" letter-spacing="1.5">
+    <textPath href="#ctp" startOffset="0%" text-anchor="middle">HOLASJDAAAAACCESIBILITY</textPath>
+  </text>
+
+  <!-- Texto abajo, centrado en 50% -->
+  <text font-size="9" fill="#222" font-family="monospace" font-weight="900" letter-spacing="1.5">
+    <textPath href="#ctp" startOffset="50%" text-anchor="middle">ACCESSIBILITY</textPath>
+  </text>
+
+  <!-- Separadores a los lados -->
+  <text font-size="10" fill="#222" font-family="monospace" font-weight="900">
+    <textPath href="#ctp" startOffset="25%" text-anchor="middle">✦</textPath>
+  </text>
+  <text font-size="10" fill="#222" font-family="monospace" font-weight="900">
+    <textPath href="#ctp" startOffset="75%" text-anchor="middle">✦</textPath>
+  </text>
+
+  <image href="assets/img/planet.svg" x="80" y="83" width="40" height="40"/>
+</svg>
 </body>
 </html>

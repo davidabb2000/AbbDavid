@@ -1,63 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@2026&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@2026&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABB David | Portfolio David Barrientos</title>
-    
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="texto-arriba">
-        <h1>ABB DAVID ABB DAVID</h1>
-    </div>
+    <title>About | Portfolio David Barrientos</title>
 
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/blogs.css">
+</head>
+
+<body>
+    <div class="first-text">
+        <span>ARCHIVE BLOG ARCHIVE BLOG</span>
+    </div>
 
     <header>
         <div class="header-left">
-            <a href="index.html" class="logo">ABB</a>
-            
+            <a href="index.html" class="logo" aria-label="ABB David - Home">ABB</a>
+
             <div class="email-wrapper">
                 <div class="copy-email">
-                    <img src="/assets/img/email.png" alt="">
-                    <button class="copy">COPY</button>
+                    <img src="/assets/img/envelope.svg" alt="Copy email address">
+                    <button class="copy" aria-label="Copy email to clipboard">COPY</button>
                 </div>
-                <a href="" class="email">info@abbdavid.co</a>
+                <a href="mailto:info@abbdavid.co" class="email">info@abbdavid.co</a>
             </div>
-            <script>
-                document.querySelector('.copy-email img').addEventListener('click', () => {
-                    navigator.clipboard.writeText('info@abbdavid.co').then(() => {
-                        const btn = document.querySelector('.copy');
-                        const wrapper = document.querySelector('.copy-email');
-                
-                        // Muestra COPIED!
-                        btn.style.opacity = '1';
-                        btn.textContent = 'COPIED!';
-                
-                        setTimeout(() => {
-                            // Oculta el botón y el copy-email
-                            btn.style.opacity = '0';
-                            btn.textContent = 'COPY';
-                            wrapper.style.opacity = '0';
-                
-                            // Vuelve al estado normal para que el hover funcione de nuevo
-                            setTimeout(() => {
-                                wrapper.style.opacity = '';
-                            }, 300);
-                        }, 1000);
-                    });
-                });
-            </script>
 
             <img src="/assets/img/stars.png" alt="">
-            <h2>Available July 2026</h2>
-                <img src="" alt="">
+            <p class="availability">Available July 2026</p>
         </div>
-        <nav>
+
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="archive.html">Archive</a></li>
@@ -68,260 +46,190 @@
         </nav>
     </header>
 
-    <main>
-        <section class="sect3">
-            <h1>All Blogs</h1>
+<main>
+    <h1>All Blogs</h1>
+    <section class="sect3" aria-label="Latest blog posts">
 
-            <div>
-                <h6>December 12, 2026</h6>
+            <article>
+                <time datetime="2026-12-12">DECEMBER 12, 2025</time>
+                <ul class="tags">
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">JS</a></li>
+                </ul>
+                <h3><a href="">WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">52 WEBMENTIONS</a>
+            </article>
 
-                <button>CSS</button>
-                <button>JS</button>
+            <article>
+                <time datetime="2026-12-12">NOVEMBER 2, 2025</time>
+                <ul class="tags">
+                    <li><a href="">ANIMATION</a></li>
+                </ul>
+                <h3><a href="">HOW I TURN STATIC DESIGNS INTO RICH EXPERIENCES</a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">18 WEBMENTIONS</a>
+            </article>
 
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <article>
+                <time datetime="2026-12-12">OCTOBER 3, 2025</time>
+                <ul class="tags">
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">EXPERIMENTAL</a></li>
+                </ul>
+                <h3><a href="">DEBUGGING IN PUBLIC <br> <br> <br>   </a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">4 WEBMENTIONS</a>
+            </article>
 
-                <button>52 WEBMENTIONS</button>
-            </div>
+            <article>
+                <time datetime="2026-12-12">SEPTEMBER 17, 2025</time>
+                <ul class="tags">
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">NEW FEATURES</a></li>
+                    <li><a href="">SCROLL-DRIVEN ANIMATIONS</a></li>
+                </ul>
+                <h3><a href="">START USING SCROLL-DRIVEN ANIMATIONS TODAY!</a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">85 WEBMENTIONS</a>
+            </article>
 
-            <div>
-                <h6>December 12, 2026</h6>
+            <article>
+                <time datetime="2026-12-12">JULY 13, 2025</time>
+                <ul class="tags">
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">NEW FEATURES</a></li>
+                    <li><a href="">VIEW TRANSITIONS</a></li>
 
-                <button>CSS</button>
-                <button>JS</button>
+                </ul>
+                <h3><a href="">BEING LAZY WITH VIEW-TRANSITION-OLD AND -NEW</a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">15 WEBMENTIONS</a>
+            </article>
 
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+            <article>
+                <time datetime="2026-12-12">JULY 7, 2025</time>
+                <ul class="tags">
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">NEW FEATURES</a></li>
+                    <li><a href="">SCROLL-DRIVEN ANIMATIONS 
+                    </a></li>
+                </ul>
+                <h3><a href="">TWO APPROACHES TO FALLBACK CSS SCROLL DRIVEN ANIMATIONS</a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">13 WEBMENTIONS</a>
+            </article>
 
-                <button>52 WEBMENTIONS</button>
-            </div>
+            <article>
+                <time datetime="2026-12-12">MARCH 11, 2025</time>
+                <ul class="tags">
+                    <li><a href="">EXPERIMENTAL</a></li>
+                    <li><a href="">JS</a></li>
+                </ul>
+                <h3><a href="">FINDING FISH IN A SEA OF GREY AND GREEN </a> <br> <br></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">9 WEBMENTIONS</a>
+            </article>
 
-            <div>
-                <h6>December 12, 2026</h6>
+            <article>
+                <time datetime="2026-12-12">JANUARY 27, 2025</time>
+                <ul class="tags">
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">NEW FEATURES</a></li>
+                    <li><a href="">VIEW TRANSITIONS</a></li>
+                </ul>
+                <h3><a href="">A PRACTICAL GUIDE TO THE CSS VIEW TRANSITION API</a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">60 WEBMENTIONS</a>
+            </article>
 
-                <button>CSS</button>
-                <button>JS</button>
-
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-
-                <button>52 WEBMENTIONS</button>
-            </div>
-
-            <div>
-                <h6>December 12, 2026</h6>
-
-                <button>CSS</button>
-                <button>JS</button>
-
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-
-                <button>52 WEBMENTIONS</button>
-            </div>
-
-            <div>
-                <h6>December 12, 2026</h6>
-
-                <button>CSS</button>
-                <button>JS</button>
-
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-
-                <button>52 WEBMENTIONS</button>
-            </div>
-
-            <div>
-                <h6>December 12, 2026</h6>
-
-                <button>CSS</button>
-                <button>JS</button>
-
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-
-                <button>52 WEBMENTIONS</button>
-            </div>
-
-            <div>
-                <h6>December 12, 2026</h6>
-
-                <button>CSS</button>
-                <button>JS</button>
-
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-
-                <button>52 WEBMENTIONS</button>
-            </div>
-
-            <div>
-                <h6>December 12, 2026</h6>
-
-                <button>CSS</button>
-                <button>JS</button>
-
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-
-                <button>52 WEBMENTIONS</button>
-            </div>
-
-            <div>
-                <h6>December 12, 2026</h6>
-
-                <button>CSS</button>
-                <button>JS</button>
-
-                <h1>WHY WE TEACH OUR STUDENTS PROGRESSIVE ENHANCEMENT</h1>
-                
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-
-                <button>52 WEBMENTIONS</button>
-            </div>
+            <article>
+                <time datetime="2026-12-12">JANUARY 15, 2025</time>
+                <ul class="tags">
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">NEW FEATURES</a></li>
+                    <li><a href="">SCROLL-DRIVEN ANIMATIONS </a></li>
+                </ul>
+                <h3><a href="">CSS SCROLL-DRIVEN ANIMATIONS FOR CREATIVE DEVELOPERS</a></h3>
+                <ul class="avatars" aria-label="People who reacted"></ul>
+                <a href="" class="webmentions">13 WEBMENTIONS</a>
+            </article>
         </section>
-    </main>
+</main>
 
 <footer>
-    <h1>
-        ABB
-    </h1>
-    <h2>
-        Work days <br> Tuesday-Friday <br> Teaching <br> Monday
-    </h2>
-    <h2>
-        Available July 2026 <br> Have a project in mind? <a href="">info@abbdavidd.co</a>
-    </h2>
+        <div class="footer1">
+            <section>
+                <a href="index.html" class="footer-logo">ABB</a>
 
-    <div class="footer-left">
-        <ul>
-            <li>
-                <a href="about.html">About</a>
-                <a href="archive.html">Archive</a>
-                <a href="blogs.html">Blogs</a>
-                <a href="speaking.html">Speaking</a>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </div>
+                <h5>
+                    Work days
+                </h5>
+                <h6>
+                    Tuesday-Friday
+                </h6>
 
-    <div class="footer-right">
-        <ul>
-            <li>
-                <a href="">Github</a>
-                <a href="">Codepen</a>
-                <a href="">Bluesky</a>
-                <a href="">Mastodon</a>
-                <a href="">Instagram</a>
-                <a href="">Linkedln</a>
-                <a href="">RSS</a>
-            </li>
-        </ul>
-    </div>
+                <h5>
+                    Teaching
+                </h5>
+                <h6>
+                    Monday
+                </h6>
+            </section>
 
-    <div class="texto-abajo">
-        <h1>ABB DAVID ABB DAVID</h1>
-    </div>
-</footer>
+        <section>
+            <p>
+            Available July 2026 <br>
+            </p>
+            <p>
+            Have a project in mind? <br> 
+            
+            <div class="footer-email-wrapper">
+                <div class="footer-copy-email">
+                    <img src="/assets/img/envelope.svg" alt="Copy email address">
+                    <button class="footer-copy" aria-label="Copy email to clipboard">COPY</button>
+                </div>
+                <a href="mailto:info@abbdavid.co" class="footer-email">info@abbdavid.co</a>
+            </div>
+
+        </p>
+        </section>
+        </div>
+
+        <section class="footer-bottom">
+            
+        <nav class="footer-left" aria-label="Footer navigation">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="speaking.html">Speaking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="footer-right" aria-label="Social media links">
+            <ul>
+                <li><a href="https://github.com/davidabb2000" rel="noopener" target="_blank">Github</a></li>
+                <li><a href="https://codepen.io/davidabb2000" rel="noopener" target="_blank">Codepen</a></li>
+                <li><a href="https://bluesky.com/davidabb2000" rel="noopener" target="_blank">Bluesky</a></li>
+                <li><a href="https://mastodon.social/@davidabb2000" rel="noopener" target="_blank">Mastodon</a></li>
+                <li><a href="https://instagram.com/davidabb2000" rel="noopener" target="_blank">Instagram</a></li>
+                <li><a href="https://linkedin.com/in/davidabb2000" rel="noopener" target="_blank">LinkedIn</a></li>
+                <li><a href="" rel="noopener">RSS</a></li>
+            </ul>
+        </nav>
+        </section>
+
+        <div class="footer-text-bottom" aria-hidden="true">
+            <span>ABB DAVID ABB DAVID ABB DAVID ABB DAVID ABB DAVID ABB DAVID</span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+
     
 </body>
 </html>

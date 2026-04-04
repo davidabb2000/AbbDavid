@@ -1,63 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@2026&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@2026&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABB David | Portfolio David Barrientos</title>
-    
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="texto-arriba">
-        <h1>ABB DAVID ABB DAVID</h1>
-    </div>
+    <title>About | Portfolio David Barrientos</title>
 
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+
+<body>
+    <div class="first-text">
+        <span>CREATIVE DEVELOPER CREATIVE DEVELOPER</span>
+    </div>
 
     <header>
         <div class="header-left">
-            <a href="index.html" class="logo">ABB</a>
-            
+            <a href="index.html" class="logo" aria-label="ABB David - Home">ABB</a>
+
             <div class="email-wrapper">
                 <div class="copy-email">
-                    <img src="/assets/img/email.png" alt="">
-                    <button class="copy">COPY</button>
+                    <img src="/assets/img/envelope.svg" alt="Copy email address">
+                    <button class="copy" aria-label="Copy email to clipboard">COPY</button>
                 </div>
-                <a href="" class="email">info@abbdavid.co</a>
+                <a href="mailto:info@abbdavid.co" class="email">info@abbdavid.co</a>
             </div>
-            <script>
-                document.querySelector('.copy-email img').addEventListener('click', () => {
-                    navigator.clipboard.writeText('info@abbdavid.co').then(() => {
-                        const btn = document.querySelector('.copy');
-                        const wrapper = document.querySelector('.copy-email');
-                
-                        // Muestra COPIED!
-                        btn.style.opacity = '1';
-                        btn.textContent = 'COPIED!';
-                
-                        setTimeout(() => {
-                            // Oculta el botón y el copy-email
-                            btn.style.opacity = '0';
-                            btn.textContent = 'COPY';
-                            wrapper.style.opacity = '0';
-                
-                            // Vuelve al estado normal para que el hover funcione de nuevo
-                            setTimeout(() => {
-                                wrapper.style.opacity = '';
-                            }, 300);
-                        }, 1000);
-                    });
-                });
-            </script>
 
             <img src="/assets/img/stars.png" alt="">
-            <h2>Available July 2026</h2>
-                <img src="" alt="">
+            <p class="availability">Available July 2026</p>
         </div>
-        <nav>
+
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="about.html">About</a></li>
                 <li><a href="archive.html">Archive</a></li>
@@ -69,125 +47,214 @@
     </header>
 
 <main>
-    <div class="main1">
-        <h1>I’m a creative developer & teacher from Medellin, Colombia</h1>
+    <section class="main1">
+        <div class="main1-text">
+            <h1>I’m a creative developer & teacher from Medellin, Colombia.</h1>
 
-        <p>I create accessible, creative, award winning websites for individuals and companies. I love to collaborate with agencies and freelancers as well as take on projects by myself.</p>
+        <p class="main1-p1">I create accessible, creative, award winning websites for individuals and companies. I love to collaborate with agencies and freelancers as well as take on projects by myself.</p>
     
-        <p>I teach the next generation of web developers at the Amsterdam University of Applied Sciences at the associate degree We’re always looking for guest lecturers, contact us! 
+        <p class="main1-p2">I teach the next generation of web developers at the Amsterdam University of Applied Sciences at the associate degree 
         <a href="">frontend design & development.</a>
         </p>
-    
-        <video src="" alt="izq"></video>
-        <img src="" alt="der">
-
-
-        <section>
-            <video src=""></video>
-            <p>We re always looking for guest and lecturers, contact us!</p>
-        </section>
-    </div>
-
-    <div class="main2">
-        <video src=""></video>
-        <video src=""></video>
-        <video src=""></video>
-        <h1>From <a href="">Small s studios</a> and <a href="">Freelancers</a> to <a href="">campaigns</a> and <a href="">large international companies</a>, I create websites for all of them.</h1>
-        <button>START A PROJECT</button>
-    </div>
-
-    <div class="main3">
-        <h1>Sharing knowledge is a big part of what I like about being a developer, from time to time I speak at meetups and in 2024, for the first time, at a conference.</h1>
-        <button>More about my speaking engagements</button>
-
-        <img src="" alt="">
-        <img src="" alt="">
-    </div>
-
-    
-    <section class="sect4">
-        <div>
-            <button>
-                <h1>WEB DEVELOPMENT</h1>
-
-                <img src="" alt="">
-
-                <button></button>
-                <button></button>
-                <button></button>
-
-            </button>
         </div>
-
-        <div>
-            <button>
-                <h1>WEB DEVELOPMENT</h1>
-                
-                <img src="" alt="">
-
-                <button></button>
-                <button></button>
-                <button></button>
-
-            </button>
-        </div>
-
-        <div>
-            <button>
-                <h1>WEB DEVELOPMENT</h1>
-                
-                <img src="" alt="">
-
-                <button></button>
-                <button></button>
-                <button></button>
-
-            </button>
+    
+        <div class="main1-imgvid">
+        <video src="assets/vid/cyd.mp4" alt="izq" autoplay loop></video>
+        <img src="assets/img/cyd.webp" alt="der">
         </div>
     </section>
+
+    <section class="main2">
+        <video src="assets/vid/leftvideo.mp4" autoplay loop ></video>
+        <video src="assets/vid/midvideo.mp4" autoplay loop></video>
+        <video src="assets/vid/rightvideo.mp4" autoplay loop></video>
+        <h1>From <a href="">Small studios</a> and <a href="">Freelancers</a> to <a href="">campaigns</a> and <a href="">large international companies</a>, I create websites for all of them.</h1>
+        <button>START A PROJECT</button>
+    </section>
+
+    <section class="main3">
+
+        <div class="main3-text">
+            <h1>Sharing knowledge is a big part of what I like about being a developer, from time to time I speak at meetups and in 2024, for the first time, at a conference.</h1>
+        <button>MORE ABOUT MY SPEAKING ENGAGEMENTS</button>
+        </div>
+
+        <img src="assets/img/thirdleft.webp" class="main3-img1">
+        <img src="assets/img/thirdright.webp" class="main3-img2">
+    </section>
+
+    
+    <section class="main4">
+
+    </section>
+
+
+
+    <section class="sect4">
+
+            <article>
+
+
+                <svg width="100%" height="120" viewBox="0 0 420 120" overflow="visible">           
+                    <!-- RAY CHARLES (arriba) - Línea negra -->
+                    <text x="244" y="150" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="none" stroke="#000" stroke-width="3">WEB</text>      
+                    <!-- RAY CHARLES - Texto principal -->
+                    <text x="245" y="148" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="white" stroke="url(#s)" stroke-width="3" paint-order="stroke fill">WEB</text>
+
+                    <!-- VIDEO MUSEUM (abajo) - Línea negra -->
+                    <text x="348.8" y="231" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="none" stroke="#000" stroke-width="3">DEVELOPMENT</text>    
+                    <!-- VIDEO MUSEUM - Texto principal -->
+                    <text x="350" y="229" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="white" stroke="url(#s)" stroke-width="3" paint-order="stroke fill">DEVELOPMENT</text>
+                </svg>
+
+
+                <img src="assets/img/pointer.svg" alt="">
+                    <ul class="service-tags">
+                        <li><a href="">CREATIVE DEVELOPMENT</a></li>
+                        <li><a href="">FRONT-END DEVELOPMENT</a></li>
+                        <li><a href="">SERVICE</a></li>
+                        <li><a href="">AVAILABLE JUNE 2026</a></li>
+                        
+                        <li><a href="">CREATIVE DEVELOPMENT</a></li>
+                        <li><a href="">FRONT-END DEVELOPMENT</a></li>
+                        <li><a href="">SERVICE</a></li>
+                        <li><a href="">AVAILABLE JUNE 2026</a></li>
+                    </ul>
+            </article>
+
+            <article>
+                <svg width="100%" height="120" viewBox="0 0 420 120" overflow="visible">           
+                    <!-- RAY CHARLES (arriba) - Línea negra -->
+                    <text x="374" y="150" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="none" stroke="#000" stroke-width="3">CONSULTANCY</text>      
+                    <!-- RAY CHARLES - Texto principal -->
+                    <text x="375" y="148" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="white" stroke="url(#s)" stroke-width="3" paint-order="stroke fill">CONSULTANCY</text>
+                </svg>
+                <img src="assets/img/lamp.svg" alt="">
+                <ul class="service-tags">
+                    <li><a href="">MODERNIZING NATIVE TECH STACKS</a></li>
+                    <li><a href="">(NEW) CSS TECHNIQUES</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">WEB DEVELOPMENT</a></li> 
+                    <li><a href="">ACCESIBILITY</a></li>
+                    <li><a href="">ANIMATION</a></li>
+                    <li><a href="">GSAP</a></li>
+                    <li><a href="">THREE.JS</a></li>
+
+                    <li><a href="">MODERNIZING NATIVE TECH STACKS</a></li>
+                    <li><a href="">(NEW) CSS TECHNIQUES</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">WEB DEVELOPMENT</a></li> 
+                    <li><a href="">ACCESIBILITY</a></li>
+                    <li><a href="">ANIMATION</a></li>
+                    <li><a href="">GSAP</a></li>
+                    <li><a href="">THREE.JS</a></li>
+                </ul>
+            </article>
+
+            <article>
+                <svg width="100%" height="120" viewBox="0 0 420 120" overflow="visible">           
+                    <!-- RAY CHARLES (arriba) - Línea negra -->
+                    <text x="304" y="150" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="none" stroke="#000" stroke-width="3">SPEAKING</text>      
+                    <!-- RAY CHARLES - Texto principal -->
+                    <text x="305" y="148" text-anchor="middle" font-size="80" font-weight="900"
+                    font-family="Bueno Regular" fill="white" stroke="url(#s)" stroke-width="3" paint-order="stroke fill">SPEAKING</text>
+                </svg>
+                <img src="assets/img/planet.svg" alt="">
+                <ul class="service-tags">
+                    <li><a href="">WORKSHOPS</a></li>
+                    <li><a href="">COMPANY TALKS</a></li>
+                    <li><a href="">CONFERENCES</a></li>
+                    <li><a href="">MEETUPS</a></li> 
+
+                    <li><a href="">WORKSHOPS</a></li>
+                    <li><a href="">COMPANY TALKS</a></li>
+                    <li><a href="">CONFERENCES</a></li>
+                    <li><a href="">MEETUPS</a></li>
+                </ul>
+            </article>
+        </section>
 </main>
 
 <footer>
-    <h1>
-        ABB
-    </h1>
-    <h2>
-        Work days <br> Tuesday-Friday <br> Teaching <br> Monday
-    </h2>
-    <h2>
-        Available July 2026 <br> Have a project in mind? <a href="">info@abbdavidd.co</a>
-    </h2>
+        <div class="footer1">
+            <section>
+                <a href="index.html" class="footer-logo">ABB</a>
 
-    <div class="footer-left">
-        <ul>
-            <li>
-                <a href="about.html">About</a>
-                <a href="archive.html">Archive</a>
-                <a href="blogs.html">Blogs</a>
-                <a href="speaking.html">Speaking</a>
-                <a href="contact.html">Contact</a>
-            </li>
-        </ul>
-    </div>
+                <h5>
+                    Work days
+                </h5>
+                <h6>
+                    Tuesday-Friday
+                </h6>
 
-    <div class="footer-right">
-        <ul>
-            <li>
-                <a href="">Github</a>
-                <a href="">Codepen</a>
-                <a href="">Bluesky</a>
-                <a href="">Mastodon</a>
-                <a href="">Instagram</a>
-                <a href="">Linkedln</a>
-                <a href="">RSS</a>
-            </li>
-        </ul>
-    </div>
+                <h5>
+                    Teaching
+                </h5>
+                <h6>
+                    Monday
+                </h6>
+            </section>
 
-    <div class="texto-abajo">
-        <h1>ABB DAVID ABB DAVID</h1>
-    </div>
-</footer>
+        <section>
+            <p>
+            Available July 2026 <br>
+            </p>
+            <p>
+            Have a project in mind? <br> 
+            
+            <div class="footer-email-wrapper">
+                <div class="footer-copy-email">
+                    <img src="/assets/img/envelope.svg" alt="Copy email address">
+                    <button class="footer-copy" aria-label="Copy email to clipboard">COPY</button>
+                </div>
+                <a href="mailto:info@abbdavid.co" class="footer-email">info@abbdavid.co</a>
+            </div>
+
+        </p>
+        </section>
+        </div>
+
+        <section class="footer-bottom">
+            
+        <nav class="footer-left" aria-label="Footer navigation">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="speaking.html">Speaking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="footer-right" aria-label="Social media links">
+            <ul>
+                <li><a href="https://github.com/davidabb2000" rel="noopener" target="_blank">Github</a></li>
+                <li><a href="https://codepen.io/davidabb2000" rel="noopener" target="_blank">Codepen</a></li>
+                <li><a href="https://bluesky.com/davidabb2000" rel="noopener" target="_blank">Bluesky</a></li>
+                <li><a href="https://mastodon.social/@davidabb2000" rel="noopener" target="_blank">Mastodon</a></li>
+                <li><a href="https://instagram.com/davidabb2000" rel="noopener" target="_blank">Instagram</a></li>
+                <li><a href="https://linkedin.com/in/davidabb2000" rel="noopener" target="_blank">LinkedIn</a></li>
+                <li><a href="" rel="noopener">RSS</a></li>
+            </ul>
+        </nav>
+        </section>
+
+        <div class="footer-text-bottom" aria-hidden="true">
+            <span>ABB DAVID ABB DAVID ABB DAVID ABB DAVID ABB DAVID ABB DAVID</span>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+
     
 </body>
 </html>
